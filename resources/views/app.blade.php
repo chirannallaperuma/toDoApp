@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laravel Vue</title>
-    @vite(['resources/js/app.js']) <!-- This loads Vue -->
+    <title>Todo App</title>
+    @vite(['resources/js/app.js'])
 </head>
 <body>
 <div id="app">

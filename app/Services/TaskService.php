@@ -14,11 +14,13 @@ class TaskService extends BaseService
         $this->taskRepository = $taskRepository;
     }
 
-    public function getTasks() {
+    public function getTasks()
+    {
         return $this->taskRepository->getRecentTasks();
     }
 
-    public function completeTask($id) {
+    public function completeTask($id)
+    {
         return $this->taskRepository->markAsCompleted($id);
     }
 }

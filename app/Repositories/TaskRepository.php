@@ -12,10 +12,13 @@ class TaskRepository extends BaseRepository implements TaskRepositoryInterface
         parent::__construct($model);
     }
 
-    public function getRecentTasks() {
+    public function getRecentTasks()
+    {
         return $this->model->where('completed', false)->latest()->take(5)->get();
     }
-    public function markAsCompleted($id) {
+
+    public function markAsCompleted($id)
+    {
         return $this->model->where('id', $id)->update(['completed' => true]);
     }
 }

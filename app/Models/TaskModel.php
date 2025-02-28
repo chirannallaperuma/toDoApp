@@ -9,6 +9,6 @@ class TaskModel extends Model
     protected $table = 'tbdb_tasks';
 
     protected $fillable = [
-        'title','description','completed'
+        'title', 'description', 'completed',
     ];
 }
