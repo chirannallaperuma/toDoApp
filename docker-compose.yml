@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
     app:
         build: .
@@ -15,15 +16,15 @@ services:
             - DB_PASSWORD=root
         ports:
             - "8000:8000"
+        command: php artisan serve --host=0.0.0.0 --port=8000  # Start Laravel
 
     db:
         image: mysql:5.7
         container_name: mysql_db
         restart: always
         environment:
+            MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: todo_db
-            MYSQL_USER: root
-            MYSQL_PASSWORD:
         ports:
             - "3306:3306"
 
